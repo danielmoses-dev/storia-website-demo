@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --product-gradient: linear-gradient(135deg, #FFB74D 0%, #FFA726 100%);
+  --theme-color: #FFB74D;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-outfit), system-ui, sans-serif;
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--product-gradient);
+  color: #ffffff;
+  min-height: 100vh;
+  overflow-x: clip;
+  transition: background 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom ::selection to Orange/White (bg-orange-500 text-white) */
+::selection {
+  background-color: #f97316;
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background-color: #f97316;
+  color: #ffffff;
+}
+
+/* Hide / Style scrollbars for a cleaner "app-like" feel */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.28);
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.28) rgba(0, 0, 0, 0.15);
+}
+
+/* Glassmorphism utility helpers */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.glass-panel-dark {
+  background: rgba(18, 18, 22, 0.65);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #ffffff 0%, rgba(255, 255, 255, 0.7) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-glow {
+  text-shadow: 0 0 25px rgba(255, 255, 255, 0.35);
+}
+
+.canvas-container {
+  will-change: transform;
+}

@@ -1,0 +1,38 @@
+# Next.js build and dependencies
+node_modules/
+/.next/
+/out/
+build/
+dist/
+
+# Raw video folders & source assets
+/Chocolate Shake/
+/Mango Frames/
+/Pomegranate Juice/
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+
+# Intermediate extracted frame sequences (keep optimized webp assets in public/images)
+public/images/**/*.png
+
+# Non-production prompt & scratch files
+/MP4_TO_SCROLLYTELLING_PROMPT.txt
+/logo.png
+
+# Logs and environment
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+.env*.local
+.env
+*.log
+
+# Editor & OS files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
